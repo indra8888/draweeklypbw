@@ -7,39 +7,34 @@ use Illuminate\Support\Facades\Route;
 | Web Routes
 |--------------------------------------------------------------------------
 |
-| Burada uygulamanız için web rotalarını kaydettiğiniz yer.
+| Here is where you can register web routes for your application. These
+| routes are loaded by the RouteServiceProvider and all of them will
+| be assigned to the "web" middleware group. Make something great!
 |
 */
 
 Route::get('/', function () {
     return view('home', [
-        "tittle" => "Home",
+        "title" => "Home",
     ]);
 });
 
-// 2. Profile Rotası (http://127.0.0.1:8000/profile)
 Route::get('/profile', function () {
     return view('profile', [
-        "tittle" => "Profile",
+        "title" => "Profile",
         "name" => "Indra nur wahyu saputra",
         "nim" => "13242520026",
         "prodi" => "Teknologi Informasi",
-        "foto" => "images/foto.jpg"
+        "image" => "11....jpg"
     ]);
 });
-
-// 3. Berita Rotası
+Route::get('/contact', function () {
+    return view('contact', [
+        "title" => "contact",
+    ]);
+});
 Route::get('/berita', function () {
     return view('berita', [
-        "tittle" => "Berita",
-        "name" => "Indra nur wahyu saputra",
-        "nim" => "13242520026",
-        "prodi" => "Teknologi Informasi",
-        "foto" => "images/foto.jpg"
+        "title" => "Berita",
     ]);
-});
-
-// 4. Contact Rotası
-Route::get('/contact', function () {
-    return view('contact');
 });

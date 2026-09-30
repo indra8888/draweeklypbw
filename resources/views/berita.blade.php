@@ -1,19 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Profile</title>
-</head>
-<body>
+@extends('layouts.main')
 
-    <div class="profile-info">
-        <h1>Halaman Profile</h1>
-        <p>Nama : {{ $name }}</p>
-        <p><span>NIM:</span> {{ $nim }}</p>
-        <p><span>Prodi:</span> {{ $prodi }}</p>
-        <img src="{{ asset($foto) }}" width="200px" alt="Foto Profil" />
-    </div>
+@section('content')
+<h1>Judul berita</h1>
+<h5>Penulis</h5>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, asperiores perferendis id cumque sed modi. Dolores, quod, ea mollitia velit enim quo nisi repudiandae odit repellendus, accusamus laudantium sint suscipit.</p>
 
-</body>
-</html>
+@endsection

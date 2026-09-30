@@ -1,15 +1,12 @@
 @extends('layouts.main')
-       
-@section('content')
-        <h1>Profile Page</h1>
-        
-        <div class="profile-info">
-            <p>Nama :  {{ $nama }}</p>
-            <p>Nim : {{ $nim }}</p>
-            <p>Prodi: {{ $prodi }}</p>
-            <img src="{{ $image }}" alt="Foto Profil" width="200px">
-        </div>
-    </div>
 
-</body>
-</html>
+@section('content')
+
+<h1>Halaman Profile</h1>
+<p>Nama : {{ $name }}</p>
+<p>NIM : {{ $nim }} </p>
+<p>Prodi : {{ $prodi }}</p>
+<img src="images/{{ $image ?? '11.jpg' }}" width="200px">
+
+
+@endsection
