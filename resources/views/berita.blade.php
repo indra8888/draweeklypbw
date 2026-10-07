@@ -1,8 +1,11 @@
 @extends('layouts.main')
 
-@section('content')
-<h1>Judul berita</h1>
-<h5>Penulis</h5>
-<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus, asperiores perferendis id cumque sed modi. Dolores, quod, ea mollitia velit enim quo nisi repudiandae odit repellendus, accusamus laudantium sint suscipit.</p>
-
+@section('contet')
+    <div class="container mt-4 text-start">
+        @foreach ($beritas as $berita)
+            <h2><a href="berita/{{ $berita['slug'] ?? '#' }}" class="text-decoration-none">{{ $berita['judul'] }}</a></h2>
+            <h5><a href="berita/{{ $berita['slug'] ?? '#' }}" class="text-decoration-none text-muted">{{ $berita['penulis'] }}</a></h5>
+            <p>{{ $berita['contet'] ?? $berita['isi'] }}</p>
+        @endforeach
+    </div>
 @endsection
